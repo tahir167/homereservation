@@ -1,0 +1,87 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "elnurdev",
+        "email": "elnur@mail.com",
+        "password": "hashedpassword",
+        "profileImage": "url",
+        "balance": 250,
+        "role": "admin",
+        "bookings": [1, 2],
+        "isBanned": false,
+        "banDate": null,
+        "createdAt": "2025-04-01T12:00:00Z",
+        "lastLogin": "2025-05-01T18:22:00Z"
+      }
+    ],
+    "apartments": [
+      {
+        "id": 1,
+        "title": "Modern Apartment in Baku",
+        "location": "Baku, Azerbaijan",
+        "pricePerNight": 80,
+        "coverImage": "url",
+        "images": ["url1", "url12"],
+        "features": ["Wifi", "Air Conditioner", "TV"],
+        "description": "Very modern and clean apartment in the heart",
+        "createdAt": "2025-03-15T11:00:00Z",
+        "rules": ["no smoking", "no pets"],
+        "bookedDates": [
+          {
+            "startDate": "2025-05-01",
+            "endDate": "2025-05-05"
+          }
+        ]
+      }
+    ],
+    "bookings": [
+      {
+        "id": 1,
+        "userId": 1,
+        "apartmentId": 1,
+        "startDate": "2025-05-10",
+        "endDate": "2025-05-15",
+        "status": "pending",
+        "totalPrice": 400,
+        "createdAt": "2025-04-30T08:30:00Z"
+      }
+    ],
+    "contacts": [
+      {
+        "id": 1,
+        "fullName": "Ali Veliyev",
+        "email": "ali@mail.com",
+        "subject": "Apartment booking issue",
+        "message": "I can't book the apartment",
+        "isRead": false,
+        "submittedAt": "2025-04-29T09:00:00Z"
+      }
+    ],
+    "coupons": [
+      {
+        "id": 1,
+        "code": "SUMMER25",
+        "discountPercent": 25,
+        "validUntil": "2025-08-01"
+      }
+    ],
+    "sliders": [
+      {
+        "id": 1,
+        "title": "Discover Luxury Living",
+        "imageURL": "slider-img-url"
+      }
+    ],
+    "reviews": [
+      {
+        "id": 1,
+        "userId": 1,
+        "apartmentId": 1,
+        "rating": 5,
+        "comment": "Very nice and clean place!",
+        "createdAt": "2025-04-28T15:00:00Z"
+      }
+    ]
+  }
+  
