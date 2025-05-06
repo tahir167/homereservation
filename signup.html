@@ -29,25 +29,38 @@
             </div>
         </nav>
     </header>
-    <main>
-        <section>
-            <h2>Create an Account</h2>
-            <form action="">
-                <div>
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username">
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
-                </div>
-            </form>
-        </section>
+    <main class="min-h-screen flex items-center justify-center p-4">
+      <section class="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 space-y-6">
+        <h2 class="text-2xl font-bold text-center text-gray-800">Create an Account</h2>
+        <form class="space-y-4 signupform">
+          <div>
+            <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+            <input type="text" name="username" id="username" class="mt-1 w-full border border-gray-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <p id="usernameError" class="text-red-500 text-sm mt-1 hidden"></p>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" name="email" id="email" class="mt-1 w-full border border-gray-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+            <input type="password" name="password" id="password" class="mt-1 w-full border border-gray-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <p id="passwordError" class="text-red-500 text-sm mt-1 hidden"></p>
+          </div>
+          <div>
+            <label for="Confirmpassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+            <input type="password" name="Confirmpassword" id="Confirmpassword" class="mt-1 w-full border border-gray-300 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <p id="confirmPasswordError" class="text-red-500 text-sm mt-1 hidden"></p> <!-- Confirm Password error mesajı -->
+          </div>
+          <button type="submit" disabled class="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition duration-200 disabled:opacity-50" id="submitbtn">Sign Up</button>
+          <p class="text-center text-sm text-gray-600">
+            Already have an account?
+            <a href="login.html" class="text-blue-600 hover:underline">Log In</a>
+          </p>
+        </form>
+      </section>
     </main>
+      <script type="module" src="./src/js/signup.js"></script>
 </body>
 
 </html>
