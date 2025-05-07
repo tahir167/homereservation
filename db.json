@@ -122,7 +122,7 @@
       "title": "Modern Apartment in Baku",
       "location": "Baku, Azerbaijan",
       "pricePerNight": 80,
-      "coverImage": "url",
+      "coverImage": "https://thumbs.dreamstime.com/b/home-house-building-exterior-interior-design-showing-tropical-pool-villa-green-garden-146979093.jpg",
       "images": [
         "url1",
         "url12"
@@ -144,6 +144,277 @@
           "endDate": "2025-05-05"
         }
       ]
+    }, {
+      "id": "2",
+      "title": "Modern Apartment in Baku",
+      "location": "Baku, Azerbaijan",
+      "pricePerNight": 80,
+      "coverImage": "https://www.greenretreats.co.uk/wp-content/uploads/garden-houses-1.jpg",
+      "images": ["img1a.jpg", "img1b.jpg"],
+      "features": ["Wifi", "Air Conditioner", "TV"],
+      "description": "Very modern and clean apartment in the heart",
+      "createdAt": "2025-03-15T11:00:00Z",
+      "rules": ["no smoking", "no pets"],
+      "bookedDates": [
+        { "startDate": "2025-05-01", "endDate": "2025-05-05" }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Cozy Studio in Ganja",
+      "location": "Ganja, Azerbaijan",
+      "pricePerNight": 50,
+      "coverImage": "https://summerhouse24.co.uk/wp-content/uploads/2017/08/garden-room-with-terrace-remo-3-G0225-02-1024x683.jpg",
+      "images": ["img2a.jpg", "img2b.jpg"],
+      "features": ["Wifi", "Kitchen"],
+      "description": "Quiet studio apartment in city center",
+      "createdAt": "2025-02-10T09:00:00Z",
+      "rules": ["no parties"],
+      "bookedDates": [
+        { "startDate": "2025-06-10", "endDate": "2025-06-15" }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Seaside Flat in Sumqayit",
+      "location": "Sumqayit, Azerbaijan",
+      "pricePerNight": 65,
+      "coverImage": "https://gardenhouse24canada.com/wp-content/uploads/2023/02/jonte-44-1.jpg",
+      "images": ["img3a.jpg", "img3b.jpg"],
+      "features": ["Wifi", "Sea View", "Balcony"],
+      "description": "Great view of the Caspian Sea",
+      "createdAt": "2025-01-20T14:00:00Z",
+      "rules": ["no smoking"],
+      "bookedDates": [
+        { "startDate": "2025-07-01", "endDate": "2025-07-04" }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Luxury Penthouse in Baku",
+      "location": "Baku, Azerbaijan",
+      "pricePerNight": 200,
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2RPfan1AsVvqI29-BU5NRUmb63msubUJZUA&s",
+      "images": ["img4a.jpg", "img4b.jpg"],
+      "features": ["Wifi", "Elevator", "Jacuzzi"],
+      "description": "High-end living with amazing views",
+      "createdAt": "2025-03-01T12:00:00Z",
+      "rules": ["no pets"],
+      "bookedDates": [
+        { "startDate": "2025-08-01", "endDate": "2025-08-10" }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Comfortable 2BR in Lankaran",
+      "location": "Lankaran, Azerbaijan",
+      "pricePerNight": 55,
+      "coverImage": "https://en.idei.club/uploads/posts/2023-06/1686333431_en-idei-club-p-garden-house-landscape-dizain-1.jpg",
+      "images": ["img5a.jpg", "img5b.jpg"],
+      "features": ["Wifi", "Parking", "Washer"],
+      "description": "Ideal for families visiting Lankaran",
+      "createdAt": "2025-02-25T10:00:00Z",
+      "rules": ["no smoking", "no loud music"],
+      "bookedDates": [
+        { "startDate": "2025-06-01", "endDate": "2025-06-05" }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Minimalist Loft in Baku",
+      "location": "Baku, Azerbaijan",
+      "pricePerNight": 90,
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQukYIXWXlAVwXRFPYZj9-fWX_0cVTOF0ns7Q&s",
+      "images": ["img6a.jpg", "img6b.jpg"],
+      "features": ["Air Conditioner", "TV", "Kitchen"],
+      "description": "Minimal design in central location",
+      "createdAt": "2025-01-30T15:00:00Z",
+      "rules": [],
+      "bookedDates": []
+    },
+    {
+      "id": "8",
+      "title": "Rustic Cottage in Quba",
+      "location": "Quba, Azerbaijan",
+      "pricePerNight": 45,
+      "coverImage": "https://media.istockphoto.com/id/519434778/photo/elegant-new-villa-with-backyard.jpg?s=612x612&w=0&k=20&c=lPD0YYv-G3o9rjPsHXTCAIGpJwQwJug_fUzAbX_AjSE=",
+      "images": ["img7a.jpg", "img7b.jpg"],
+      "features": ["Fireplace", "Nature View"],
+      "description": "Perfect for nature lovers",
+      "createdAt": "2025-04-01T10:30:00Z",
+      "rules": ["no parties"],
+      "bookedDates": [
+        { "startDate": "2025-09-15", "endDate": "2025-09-20" }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Spacious Apartment in Nakhchivan",
+      "location": "Nakhchivan, Azerbaijan",
+      "pricePerNight": 70,
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAijj3jrp6ltfVLfl55ljY41rW-A9bgWiW4g&s",
+      "images": ["img8a.jpg", "img8b.jpg"],
+      "features": ["Wifi", "Kitchen", "Balcony"],
+      "description": "Bright and airy apartment",
+      "createdAt": "2025-02-12T08:00:00Z",
+      "rules": [],
+      "bookedDates": []
+    },
+    {
+      "id": "10",
+      "title": "Charming Home in Shaki",
+      "location": "Shaki, Azerbaijan",
+      "pricePerNight": 60,
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSW4l9mAMrXPzL_IbaoPNfa20VEsF167NNA&s",
+      "images": ["img9a.jpg", "img9b.jpg"],
+      "features": ["Air Conditioner", "TV"],
+      "description": "Traditional home with modern comforts",
+      "createdAt": "2025-03-18T13:00:00Z",
+      "rules": ["no pets"],
+      "bookedDates": []
+    },
+    {
+      "id": "11",
+      "title": "Downtown Flat in Baku",
+      "location": "Baku, Azerbaijan",
+      "pricePerNight": 85,
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCWcZ_IXIzK318Xw9I4q577oezGVr6dN1Gbw&s",
+      "images": ["img10a.jpg", "img10b.jpg"],
+      "features": ["Wifi", "TV", "Washer"],
+      "description": "In the middle of shopping and nightlife",
+      "createdAt": "2025-01-15T11:30:00Z",
+      "rules": [],
+      "bookedDates": []
+    },
+    {
+      "id": "12",
+      "title": "Budget Room in Mingachevir",
+      "location": "Mingachevir, Azerbaijan",
+      "pricePerNight": 30,
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3cfuNSaL91fFx2qTrqwsk01QsWD44diOYXA&s",
+      "images": ["img11a.jpg", "img11b.jpg"],
+      "features": ["Wifi"],
+      "description": "Simple and affordable stay",
+      "createdAt": "2025-03-05T09:15:00Z",
+      "rules": [],
+      "bookedDates": []
+    },
+    {
+      "id": "13",
+      "title": "Stylish Flat in Ganja",
+      "location": "Ganja, Azerbaijan",
+      "pricePerNight": 65,
+      "coverImage": "https://www.garden-view.com/wp-content/uploads/Pasadena-swimming-pool-glass-tiles-oak-tree.jpg",
+      "images": ["img12a.jpg", "img12b.jpg"],
+      "features": ["Wifi", "Air Conditioner", "TV"],
+      "description": "Stylish interior design",
+      "createdAt": "2025-04-10T12:00:00Z",
+      "rules": ["no smoking"],
+      "bookedDates": []
+    },
+    {
+      "id": "14",
+      "title": "Historic Home in Lahij",
+      "location": "Lahij, Azerbaijan",
+      "pricePerNight": 40,
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5oWZUGwlwXUYglIMEVjuA_GKszOPKPogYsw&s",
+      "images": ["img13a.jpg", "img13b.jpg"],
+      "features": ["Mountain View", "Fireplace"],
+      "description": "Step back in time with comfort",
+      "createdAt": "2025-03-20T16:00:00Z",
+      "rules": [],
+      "bookedDates": []
+    },
+    {
+      "id": "15",
+      "title": "Eco Cabin in Gabala",
+      "location": "Gabala, Azerbaijan",
+      "pricePerNight": 55,
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR167wRjufVBDRVmXVt8O6iW4s79nNhAcyyHA&s",
+      "images": ["img14a.jpg", "img14b.jpg"],
+      "features": ["Wifi", "Nature View"],
+      "description": "Surrounded by forests and rivers",
+      "createdAt": "2025-04-15T17:00:00Z",
+      "rules": ["no loud music"],
+      "bookedDates": []
+    },
+    {
+      "id": "16",
+      "title": "City View Flat in Baku",
+      "location": "Baku, Azerbaijan",
+      "pricePerNight": 95,
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhjF-bNwkAyJnXK6m-AXoTDMlSrIM5xK2-XA&s",
+      "images": ["img15a.jpg", "img15b.jpg"],
+      "features": ["Wifi", "Balcony", "TV"],
+      "description": "Panoramic view of Baku city",
+      "createdAt": "2025-03-25T14:30:00Z",
+      "rules": [],
+      "bookedDates": []
+    },
+    {
+      "id": "17",
+      "title": "Art Loft in Baku",
+      "location": "Baku, Azerbaijan",
+      "pricePerNight": 100,
+      "coverImage": "https://d8uprjylqiycc.cloudfront.net/media/webp_image/catalog/product/cache/cf6b07319a5cfe235a33ac3fc9783531/9/j/9jog8g5e.webp",
+      "images": ["img16a.jpg", "img16b.jpg"],
+      "features": ["Art Gallery Feel", "TV", "Wifi"],
+      "description": "Unique artistic atmosphere",
+      "createdAt": "2025-02-22T13:15:00Z",
+      "rules": ["no pets"],
+      "bookedDates": []
+    },
+    {
+      "id": "18",
+      "title": "Quiet Flat in Khirdalan",
+      "location": "Khirdalan, Azerbaijan",
+      "pricePerNight": 40,
+      "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv9Xy4WnNaEp92S4rRk5ncxiYDulIe2VrckA&s",
+      "images": ["img17a.jpg", "img17b.jpg"],
+      "features": ["Wifi", "Kitchen"],
+      "description": "Affordable and peaceful",
+      "createdAt": "2025-01-10T11:00:00Z",
+      "rules": [],
+      "bookedDates": []
+    },
+    {
+      "id": "19",
+      "title": "Designer Apartment in Baku",
+      "location": "Baku, Azerbaijan",
+      "pricePerNight": 120,
+      "coverImage": "https://d8uprjylqiycc.cloudfront.net/media/tm_blog/d/u/dundee_70_b_8_1.jpeg",
+      "images": ["img18a.jpg", "img18b.jpg"],
+      "features": ["Wifi", "Designer Furniture", "TV"],
+      "description": "Stylish living in downtown",
+      "createdAt": "2025-04-20T15:00:00Z",
+      "rules": [],
+      "bookedDates": []
+    },
+    {
+      "id": "20",
+      "title": "Mountain Cabin in Ismayilli",
+      "location": "Ismayilli, Azerbaijan",
+      "pricePerNight": 50,
+      "coverImage": "https://media.istockphoto.com/id/1255835530/photo/modern-custom-suburban-home-exterior.jpg?s=612x612&w=0&k=20&c=0Dqjm3NunXjZtWVpsUvNKg2A4rK2gMvJ-827nb4AMU4=",
+      "images": ["img19a.jpg", "img19b.jpg"],
+      "features": ["Fireplace", "Nature View"],
+      "description": "Peaceful cabin in mountains",
+      "createdAt": "2025-02-05T10:00:00Z",
+      "rules": ["no parties"],
+      "bookedDates": []
+    },
+    {
+      "id": "21",
+      "title": "Business Apartment in Baku",
+      "location": "Baku, Azerbaijan",
+      "pricePerNight": 85,
+      "coverImage": "https://www.greenretreats.co.uk/wp-content/uploads/TGO1-D-10.jpg",
+      "images": ["img20a.jpg", "img20b.jpg"],
+      "features": ["Wifi", "Work Desk", "Air Conditioner"],
+      "description": "Perfect for business travelers",
+      "createdAt": "2025-03-28T09:00:00Z",
+      "rules": ["no smoking"],
+      "bookedDates": []
     }
   ],
   "bookings": [
