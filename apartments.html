@@ -23,7 +23,7 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class=" block md:hidden"><i class="fa-solid fa-bars"></i></div>
-      <div class="navbtn  gap-8 hidden md:flex">
+      <div class="navbtn  gap-8 hidden md:flex" id="navButtons">
         <button class=" bg-white shadow w-[70px] h-[40px] rounded-md"><a href="login.html">Log in</a></button>
         <button class="w-[70px] h-[40px] bg-blue-600 rounded-md"><a href="signup.html">Sign up</a></button>
       </div>
@@ -40,21 +40,18 @@
         <option value="high-to-low">High to Low</option>
       </select>
 
-      <select id="avnotav"
-        class=" w-[150px] px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <option value="low-to-high">Available</option>
-        <option value="high-to-low">Not Available</option>
-      </select>
+   
 
       <select id="selectlocation"
         class="w-[200px] px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 overflow-auto max-h-[200px]">
         <option value="baku">Baku</option>
         <option value="ganja">Ganja</option>
-        <option value="mingechevir">Gabala</option>
-        <option value="sheki">Lankaran</option>
+        <option value="Gabala">Gabala</option>
+        <option value="Lankaran">Lankaran</option>
         <option value="sumgayit">Sumgayit</option>
         <option value="shamkir">Shamkir</option>
-        <option value="sabranch">Susha</option>
+        <option value="susha">Susha</option>
+        <option value="gabala">Gabala</option>
       </select>
     </div>
 
@@ -63,6 +60,7 @@
 
     </div>
   </div>
+  <script type="module" src="./src/components/header.js"></script>
 <script type="module" src="./src/js/apartments.js"></script>
 </body>
 

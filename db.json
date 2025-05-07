@@ -235,7 +235,7 @@
     {
       "id": "8",
       "title": "Rustic Cottage in Quba",
-      "location": "Quba, Azerbaijan",
+      "location": "Susha, Azerbaijan",
       "pricePerNight": 45,
       "coverImage": "https://media.istockphoto.com/id/519434778/photo/elegant-new-villa-with-backyard.jpg?s=612x612&w=0&k=20&c=lPD0YYv-G3o9rjPsHXTCAIGpJwQwJug_fUzAbX_AjSE=",
       "images": ["img7a.jpg", "img7b.jpg"],
@@ -250,7 +250,7 @@
     {
       "id": "9",
       "title": "Spacious Apartment in Nakhchivan",
-      "location": "Nakhchivan, Azerbaijan",
+      "location": "Shamkir, Azerbaijan",
       "pricePerNight": 70,
       "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAijj3jrp6ltfVLfl55ljY41rW-A9bgWiW4g&s",
       "images": ["img8a.jpg", "img8b.jpg"],
@@ -263,7 +263,7 @@
     {
       "id": "10",
       "title": "Charming Home in Shaki",
-      "location": "Shaki, Azerbaijan",
+      "location": "Baku, Azerbaijan",
       "pricePerNight": 60,
       "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGSW4l9mAMrXPzL_IbaoPNfa20VEsF167NNA&s",
       "images": ["img9a.jpg", "img9b.jpg"],
@@ -289,7 +289,7 @@
     {
       "id": "12",
       "title": "Budget Room in Mingachevir",
-      "location": "Mingachevir, Azerbaijan",
+      "location": "Ganja, Azerbaijan",
       "pricePerNight": 30,
       "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3cfuNSaL91fFx2qTrqwsk01QsWD44diOYXA&s",
       "images": ["img11a.jpg", "img11b.jpg"],
@@ -315,7 +315,7 @@
     {
       "id": "14",
       "title": "Historic Home in Lahij",
-      "location": "Lahij, Azerbaijan",
+      "location": "Lankaran, Azerbaijan",
       "pricePerNight": 40,
       "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5oWZUGwlwXUYglIMEVjuA_GKszOPKPogYsw&s",
       "images": ["img13a.jpg", "img13b.jpg"],
@@ -367,7 +367,7 @@
     {
       "id": "18",
       "title": "Quiet Flat in Khirdalan",
-      "location": "Khirdalan, Azerbaijan",
+      "location": "Gabala, Azerbaijan",
       "pricePerNight": 40,
       "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv9Xy4WnNaEp92S4rRk5ncxiYDulIe2VrckA&s",
       "images": ["img17a.jpg", "img17b.jpg"],
@@ -393,7 +393,7 @@
     {
       "id": "20",
       "title": "Mountain Cabin in Ismayilli",
-      "location": "Ismayilli, Azerbaijan",
+      "location": "Sumgayit, Azerbaijan",
       "pricePerNight": 50,
       "coverImage": "https://media.istockphoto.com/id/1255835530/photo/modern-custom-suburban-home-exterior.jpg?s=612x612&w=0&k=20&c=0Dqjm3NunXjZtWVpsUvNKg2A4rK2gMvJ-827nb4AMU4=",
       "images": ["img19a.jpg", "img19b.jpg"],
