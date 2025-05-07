@@ -18,8 +18,9 @@ formLogin.addEventListener("submit", async function (e) {
     );
 
     if (foundUser) {
+        localStorage.setItem("loggedUser", JSON.stringify(foundUser.id));
       window.location.href = "apartments.html";
-      
+
     } else {
       alert("Email və ya şifrə səhvdir!");
     }
