@@ -1,5 +1,5 @@
 import { getAllApartments } from "../services/apartments/request.js";
-
+const loggedUserId = localStorage.getItem("loggedUser");
 document.addEventListener("DOMContentLoaded", async function () {
   const urlParams = new URLSearchParams(window.location.search);
   const apartmentId = urlParams.get("id");

@@ -34,37 +34,34 @@
       </div>
     </nav>
   </header>
+<div class="bg-gray-100 flex items-center justify-center h-screen">
 
-
-
-  <div class="flex flex-col gap-4 w-full max-w-md mx-auto mt-10">
-    <div class="flex flex-col">
-      <label for="start-date" class="mb-2 text-sm font-medium text-gray-700">Başlama Tarixi</label>
-      <input
-        type="date"
-        id="start-date"
-        name="start-date"
-        class="px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-      />
+    <div class="booking-container bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Book Your Stay</h2>
+      <form id="bookingForm" class="space-y-4">
+        <div class="form-group">
+          <label for="startDate" class="block text-sm font-medium text-gray-700">Start Date</label>
+          <input type="date" id="startDate" name="startDate"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+        <div class="form-group">
+          <label for="endDate" class="block text-sm font-medium text-gray-700">End Date</label>
+          <input type="date" id="endDate" name="endDate"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+        <button type="submit"
+          class="w-full py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-200">
+          Confirm Booking
+        </button>
+      </form>
+      <div id="message" class="mt-4 text-center text-red-600"></div>
     </div>
   
-    <div class="flex flex-col">
-      <label for="end-date" class="mb-2 text-sm font-medium text-gray-700">Bitmə Tarixi</label>
-      <input
-        type="date"
-        id="end-date"
-        name="end-date"
-        class="px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-      />
-    </div>
-  
-    <button
-      type="submit"
-      class="mt-2 w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-xl hover:bg-blue-700 transition duration-200"
-    >
-      Rezerv et
-    </button>
-  </div>
+</div>
+
+
+
+<script type="module" src="./src/js/book.js"></script>
   <script type="module" src="./src/components/header.js"></script>
 </body>
 

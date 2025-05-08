@@ -1,8 +1,7 @@
 import axios from "axios";
 import { API_BASE_URL, endpoints } from "../../constants/constants.js";
 
-// 1. Get all apartments
-export const getAllApartments = async () => {
+export const getAllbook = async () => {
   try {
     const response = await axios.get(`${API_BASE_URL}${endpoints.bookings}`);
     return {
@@ -17,24 +16,22 @@ export const getAllApartments = async () => {
   }
 };
 
-// 2. Get apartment by ID
-export const getApartmentById = async (id) => {
+export const getbookById = async (id) => {
   try {
     const response = await axios.get(`${API_BASE_URL}${endpoints.bookings}/${id}`);
     return {
       data: response.data,
-      message: "Apartment received successfully"
+      message: " received successfully"
     };
   } catch (error) {
     return {
       data: null,
-      message: "Failed to fetch apartment"
+      message: "Failed to fetch "
     };
   }
 };
 
-// 3. Create new apartment
-export const createApartment = async (apartmentData) => {
+export const createbook = async (booktData) => {
   try {
     const response = await axios.post(`${API_BASE_URL}${endpoints.bookings}`, booktData);
     return {
@@ -44,29 +41,27 @@ export const createApartment = async (apartmentData) => {
   } catch (error) {
     return {
       data: null,
-      message: "Failed to create apartment"
+      message: "Failed to create "
     };
   }
 };
 
-// 4. Full update (PUT)
-export const updateApartment = async (id, updatedData) => {
+export const updatebook = async (id, updatedData) => {
   try {
     const response = await axios.put(`${API_BASE_URL}${endpoints.bookings}/${id}`, updatedData);
     return {
       data: response.data,
-      message: "Apartment updated successfully"
+      message: " updated successfully"
     };
   } catch (error) {
     return {
       data: null,
-      message: "Failed to update apartment"
+      message: "Failed to update "
     };
   }
 };
 
-// 5. Partial update (PATCH)
-export const patchApartment = async (id, partialData) => {
+export const patchbook = async (id, partialData) => {
   try {
     const response = await axios.patch(`${API_BASE_URL}${endpoints.bookings}/${id}`, partialData);
     return {
@@ -81,8 +76,7 @@ export const patchApartment = async (id, partialData) => {
   }
 };
 
-// 6. Delete apartment
-export const deleteApartment = async (id) => {
+export const deletebook = async (id) => {
   try {
     const response = await axios.delete(`${API_BASE_URL}${endpoints.bookings}/${id}`);
     return {
