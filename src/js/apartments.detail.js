@@ -1,5 +1,6 @@
 import { getAllApartments } from "../services/apartments/request.js";
 const loggedUserId = localStorage.getItem("loggedUser");
+
 document.addEventListener("DOMContentLoaded", async function () {
   const urlParams = new URLSearchParams(window.location.search);
   const apartmentId = urlParams.get("id");
@@ -116,7 +117,7 @@ function renderApartmentDetail(apartment) {
             <div>
               <h3 class="font-bold mb-2">Book this Apartment:</h3>
              
-             <button class="bookbtn inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+             <button id="bookId" data-id="${apartment.id}" class="bookbtn inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                 Book
             </ button>
             </div>

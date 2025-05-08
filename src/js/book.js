@@ -2,15 +2,18 @@ import { createbook } from "../services/book/request";
 
 document.addEventListener("DOMContentLoaded", function () {
   const bookingForm = document.getElementById("bookingForm");
-
+    const btnBook = document.getElementById("bookId")
   bookingForm.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
     
-    const loggedUserId = Number(localStorage.getItem("loggedUser"));
-    const apartmentId = Number(new URLSearchParams(window.location.search).get("id"));
+   
+    const loggedUserId = JSON.parse(localStorage.getItem("loggedUser"));
+    const apartmentId = btnBook.setAttribute("data-id")
+    
+    console.log(apartmentId)
     if (!loggedUserId) {
       document.getElementById("message").innerHTML = `<p>You need to log in first.</p>`;
       return;

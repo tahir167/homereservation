@@ -617,6 +617,60 @@
       "apartmentId": 0,
       "startDate": "2025-05-01",
       "endDate": "2025-05-16"
+    },
+    {
+      "id": "533d",
+      "userId": "e3af",
+      "apartmentId": 0,
+      "startDate": "2025-05-09",
+      "endDate": "2025-05-30",
+      "status": "pending",
+      "createdAt": "2025-05-08T12:24:56.485Z"
+    },
+    {
+      "id": "4c91",
+      "userId": "e3af",
+      "apartmentId": 0,
+      "startDate": "2025-05-16",
+      "endDate": "2025-05-31",
+      "status": "pending",
+      "createdAt": "2025-05-08T12:25:29.378Z"
+    },
+    {
+      "id": "636a",
+      "userId": "e3af",
+      "apartmentId": null,
+      "startDate": "2025-05-16",
+      "endDate": "2025-05-24",
+      "status": "pending",
+      "createdAt": "2025-05-08T12:28:37.221Z"
+    },
+    {
+      "id": "9a1b",
+      "userId": "e3af",
+      "apartmentId": null,
+      "startDate": "2025-05-15",
+      "endDate": "2025-05-23",
+      "status": "pending",
+      "createdAt": "2025-05-08T12:30:48.719Z"
+    },
+    {
+      "id": "ded1",
+      "userId": "e3af",
+      "apartmentId": null,
+      "startDate": "2025-05-21",
+      "endDate": "2025-05-31",
+      "status": "pending",
+      "createdAt": "2025-05-08T12:31:22.494Z"
+    },
+    {
+      "id": "83fd",
+      "userId": "e3af",
+      "apartmentId": null,
+      "startDate": "2025-05-09",
+      "endDate": "2025-05-19",
+      "status": "pending",
+      "createdAt": "2025-05-08T12:33:37.509Z"
     }
   ],
   "contacts": [
