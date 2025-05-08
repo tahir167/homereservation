@@ -34,6 +34,37 @@
       </div>
     </nav>
   </header>
+
+
+
+  <div class="flex flex-col gap-4 w-full max-w-md mx-auto mt-10">
+    <div class="flex flex-col">
+      <label for="start-date" class="mb-2 text-sm font-medium text-gray-700">Başlama Tarixi</label>
+      <input
+        type="date"
+        id="start-date"
+        name="start-date"
+        class="px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+      />
+    </div>
+  
+    <div class="flex flex-col">
+      <label for="end-date" class="mb-2 text-sm font-medium text-gray-700">Bitmə Tarixi</label>
+      <input
+        type="date"
+        id="end-date"
+        name="end-date"
+        class="px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+      />
+    </div>
+  
+    <button
+      type="submit"
+      class="mt-2 w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-xl hover:bg-blue-700 transition duration-200"
+    >
+      Rezerv et
+    </button>
+  </div>
   <script type="module" src="./src/components/header.js"></script>
 </body>
 

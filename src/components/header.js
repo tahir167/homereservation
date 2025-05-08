@@ -28,6 +28,7 @@ async function renderHeader() {
     navButtons.innerHTML = `
       <span class="font-semibold">${user.username}</span>
       <button id="logoutBtn" class="bg-red-500 text-white px-3 py-1 rounded-md">Log out</button>
+      <a href="person.html"><i class="fa-solid fa-user"></i></a>
     `;
     
     document.getElementById("logoutBtn").addEventListener("click", () => {
