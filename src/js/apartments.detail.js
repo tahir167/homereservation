@@ -135,6 +135,6 @@ function renderApartmentDetail(apartment) {
 
  const bookBtn= document.querySelector(".bookbtn")
  bookBtn.addEventListener("click",async function (params) {
-  window.location.href="book.html"
+  window.location.href = `book.html?id=${apartment.id}`;
  })
 }

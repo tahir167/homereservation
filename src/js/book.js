@@ -1,17 +1,22 @@
-import { createbook } from "../services/book/request";
-
+import { createbook } from "../services/book/request.js";
+import { getAllApartments } from "../services/apartments/request.js";
 document.addEventListener("DOMContentLoaded", function () {
   const bookingForm = document.getElementById("bookingForm");
-    const btnBook = document.getElementById("bookId")
+  const apartmentId = new URLSearchParams(window.location.search).get("id")
   bookingForm.addEventListener("submit", async function (e) {
     e.preventDefault();
-
+    const apartmentResponse = await getAllApartments();
+    const selectedApartment = apartmentResponse.data.find(ap => ap.id === apartmentId);
+    
+    if (!selectedApartment) {
+      document.getElementById("message").innerHTML = `<p>Apartment not found.</p>`;
+      return;
+    }
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
     
    
     const loggedUserId = JSON.parse(localStorage.getItem("loggedUser"));
-    const apartmentId = btnBook.setAttribute("data-id")
     
     console.log(apartmentId)
     if (!loggedUserId) {
@@ -26,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 startDate: startDate,
                 endDate: endDate,
                 status: "pending", 
-                createdAt: new Date().toISOString() 
+                createdAt: new Date().toISOString(),
+                pricePerNight: selectedApartment.pricePerNight // <-- əlavə etdik 
               });
     
           document.getElementById("message").innerHTML = `<p>Booking Confirmed: ${response.data.title}</p>`;

@@ -671,6 +671,217 @@
       "endDate": "2025-05-19",
       "status": "pending",
       "createdAt": "2025-05-08T12:33:37.509Z"
+    },
+    {
+      "id": "0072",
+      "userId": "e3af",
+      "apartmentId": null,
+      "startDate": "2025-05-08",
+      "endDate": "2025-05-20",
+      "status": "pending",
+      "createdAt": "2025-05-08T12:38:08.904Z"
+    },
+    {
+      "id": "e002",
+      "userId": "e3af",
+      "apartmentId": null,
+      "startDate": "2025-05-16",
+      "endDate": "2025-05-22",
+      "status": "pending",
+      "createdAt": "2025-05-08T12:38:56.509Z"
+    },
+    {
+      "id": "8aae",
+      "userId": "e3af",
+      "apartmentId": "3",
+      "startDate": "2025-05-10",
+      "endDate": "2025-05-28",
+      "status": "pending",
+      "createdAt": "2025-05-08T12:46:34.025Z"
+    },
+    {
+      "id": "a0d0",
+      "userId": "e3af",
+      "apartmentId": "2",
+      "startDate": "2025-05-03",
+      "endDate": "2025-05-29",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:00:15.643Z"
+    },
+    {
+      "id": "6c03",
+      "userId": "e3af",
+      "apartmentId": "2",
+      "startDate": "2025-05-04",
+      "endDate": "2025-05-05",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:00:27.663Z"
+    },
+    {
+      "id": "2348",
+      "userId": "e3af",
+      "apartmentId": "2",
+      "startDate": "2025-05-02",
+      "endDate": "2025-05-03",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:03:53.989Z"
+    },
+    {
+      "id": "2111",
+      "userId": "e3af",
+      "apartmentId": "2",
+      "startDate": "2025-05-02",
+      "endDate": "2025-05-04",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:05:03.557Z"
+    },
+    {
+      "id": "2c40",
+      "userId": "e3af",
+      "apartmentId": "2",
+      "startDate": "2025-05-09",
+      "endDate": "2025-05-16",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:15:17.568Z"
+    },
+    {
+      "id": "903f",
+      "userId": "\"e3af\"",
+      "apartmentId": "2",
+      "startDate": "2025-05-01",
+      "endDate": "2025-05-25",
+      "status": "pending",
+      "totalPrice": 1920,
+      "createdAt": "2025-05-08T13:22:24.337Z"
+    },
+    {
+      "id": "cbf1",
+      "userId": "\"e3af\"",
+      "apartmentId": "2",
+      "startDate": "2025-05-10",
+      "endDate": "2025-05-11",
+      "status": "pending",
+      "totalPrice": 80,
+      "createdAt": "2025-05-08T13:24:06.923Z"
+    },
+    {
+      "id": "773a",
+      "userId": "e3af",
+      "apartmentId": "2",
+      "startDate": "2025-05-09",
+      "endDate": "2025-05-15",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:24:35.256Z"
+    },
+    {
+      "id": "11cb",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-05-09",
+      "endDate": "2025-05-31",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:25:27.411Z"
+    },
+    {
+      "id": "b20b",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-05-03",
+      "endDate": "2025-05-20",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:26:19.113Z"
+    },
+    {
+      "id": "5ec2",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-05-09",
+      "endDate": "2025-05-28",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:27:43.473Z"
+    },
+    {
+      "id": "4214",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-05-01",
+      "endDate": "2025-05-25",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:28:43.618Z"
+    },
+    {
+      "id": "b430",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-05-03",
+      "endDate": "2025-05-04",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:33:29.664Z"
+    },
+    {
+      "id": "9e1b",
+      "userId": "1",
+      "apartmentId": "3",
+      "startDate": "2025-05-15",
+      "endDate": "2025-05-31",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:34:04.163Z"
+    },
+    {
+      "id": "e48e",
+      "userId": "1",
+      "apartmentId": "3",
+      "startDate": "2025-05-09",
+      "endDate": "2025-05-29",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:35:57.563Z"
+    },
+    {
+      "id": "a227",
+      "userId": "1",
+      "apartmentId": "3",
+      "startDate": "2025-05-24",
+      "endDate": "2025-05-31",
+      "status": "pending",
+      "createdAt": "2025-05-08T13:36:50.974Z"
+    },
+    {
+      "id": "7fd2",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-05-29",
+      "endDate": "2025-05-30",
+      "status": "pending",
+      "createdAt": "2025-05-08T15:10:14.941Z"
+    },
+    {
+      "id": "b74b",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-05-16",
+      "endDate": "2025-05-17",
+      "status": "pending",
+      "createdAt": "2025-05-08T15:11:17.993Z"
+    },
+    {
+      "id": "5516",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-05-09",
+      "endDate": "2025-05-10",
+      "status": "pending",
+      "createdAt": "2025-05-08T15:22:44.145Z",
+      "pricePerNight": 80
+    },
+    {
+      "id": "dbfe",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-05-16",
+      "endDate": "2025-05-24",
+      "status": "pending",
+      "createdAt": "2025-05-08T15:39:38.912Z",
+      "pricePerNight": 80
     }
   ],
   "contacts": [
