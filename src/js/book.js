@@ -1,122 +1,116 @@
-import { createbook } from "../services/book/request.js";
+import { createbook, getAllbook } from "../services/book/request.js";
 import { getAllApartments } from "../services/apartments/request.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const bookingForm = document.getElementById("bookingForm");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("bookingForm");
   const apartmentId = new URLSearchParams(window.location.search).get("id");
+  const startInput = document.getElementById("startDate");
+  const endInput = document.getElementById("endDate");
+  const messageBox = document.getElementById("message");
+  const totalPriceEl = document.getElementById("totalPrice");
+  const totalPriceSection = document.getElementById("totalPriceSection");
+
   let selectedApartment = null;
+  let allBookings = [];
 
-  function calculateDays(startDate, endDate) {
-    const start = new Date(startDate);
-    const end = new Date(endDate);
-    const timeDiff = Math.abs(end - start);
-    return Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-  }
+  const calculateDays = (start, end) => {
+    const diff = new Date(end) - new Date(start);
+    return Math.ceil(diff / (1000 * 60 * 60 * 24));
+  };
 
-  function updateTotalPrice() {
-    const startDate = document.getElementById("startDate").value;
-    const endDate = document.getElementById("endDate").value;
-    const priceDisplay = document.getElementById("totalPrice");
-    
-    if (selectedApartment && startDate && endDate) {
-      const numberOfNights = calculateDays(startDate, endDate);
-      const totalPrice = selectedApartment.pricePerNight * numberOfNights;
-      priceDisplay.textContent = `₼${totalPrice} (${numberOfNights} nights at ₼${selectedApartment.pricePerNight}/night)`;
-      document.getElementById("totalPriceSection").classList.remove("hidden");
+  const updatePrice = () => {
+    const start = startInput.value;
+    const end = endInput.value;
+
+    if (selectedApartment && start && end) {
+      const nights = calculateDays(start, end);
+      const total = selectedApartment.pricePerNight * nights;
+
+      totalPriceEl.textContent = `₼${total} (${nights} nights at ₼${selectedApartment.pricePerNight}/night)`;
+      totalPriceSection.classList.remove("hidden");
     }
-  }
+  };
 
-  async function fetchApartmentDetails() {
+  const isOverlapping = (s1, e1, s2, e2) => {
+    return new Date(s1) <= new Date(e2) && new Date(s2) <= new Date(e1);
+  };
+
+  const isAvailable = (start, end) => {
+    const bookings = allBookings.filter(b => b.apartmentId === apartmentId && b.status !== "cancelled");
+    return !bookings.some(b => isOverlapping(start, end, b.startDate, b.endDate));
+  };
+
+  const loadData = async () => {
     try {
-      const apartmentResponse = await getAllApartments();
-      selectedApartment = apartmentResponse.data.find(ap => ap.id === apartmentId);
+      const apartments = await getAllApartments();
+      selectedApartment = apartments.data.find(a => a.id === apartmentId);
 
-      if (selectedApartment) {
-        document.getElementById("apartmentTitle").textContent = selectedApartment.title;
-        document.getElementById("pricePerNight").textContent = `₼${selectedApartment.pricePerNight} per night`;
-        
-        const startDateInput = document.getElementById("startDate");
-        const endDateInput = document.getElementById("endDate");
-        
-        startDateInput.addEventListener("change", updateTotalPrice);
-        endDateInput.addEventListener("change", updateTotalPrice);
-        
-        const today = new Date().toISOString().split('T')[0];
-        startDateInput.min = today;
-        endDateInput.min = today;
-      } else {
-        document.getElementById("message").innerHTML = `<p class="text-red-600">Apartment not found.</p>`;
+      if (!selectedApartment) {
+        messageBox.innerHTML = `<p class="text-red-600">Apartment not found.</p>`;
+        return;
       }
-    } catch (error) {
-      console.error("Error fetching apartment details:", error);
-      document.getElementById("message").innerHTML = `<p class="text-red-600">Error loading apartment details: ${error.message}</p>`;
+
+      const bookings = await getAllbook();
+      allBookings = bookings.data || [];
+
+      document.getElementById("apartmentTitle").textContent = selectedApartment.title;
+      document.getElementById("pricePerNight").textContent = `₼${selectedApartment.pricePerNight} per night`;
+
+      const today = new Date().toISOString().split("T")[0];
+      startInput.min = endInput.min = today;
+
+      startInput.addEventListener("change", updatePrice);
+      endInput.addEventListener("change", updatePrice);
+    } catch (err) {
+      messageBox.innerHTML = `<p class="text-red-600">Error: ${err.message}</p>`;
     }
-  }
+  };
 
-  fetchApartmentDetails();
-
-  bookingForm.addEventListener("submit", async function (e) {
+  form.addEventListener("submit", async e => {
     e.preventDefault();
-    
-    if (!selectedApartment) {
-      document.getElementById("message").innerHTML = `<p class="text-red-600">Apartment not found.</p>`;
-      return;
+
+    const start = startInput.value;
+    const end = endInput.value;
+    const userId = JSON.parse(localStorage.getItem("loggedUser"));
+
+    if (!selectedApartment) return (messageBox.innerHTML = `<p class="text-red-600">Apartment not found.</p>`);
+    if (!userId) return (messageBox.innerHTML = `<p class="text-red-600">You need to log in first.</p>`);
+    if (new Date(start) >= new Date(end)) {
+      return (messageBox.innerHTML = `<p class="text-red-600">End date must be after start date.</p>`);
     }
-    
-    const startDate = document.getElementById("startDate").value;
-    const endDate = document.getElementById("endDate").value;
-    const numberOfNights = calculateDays(startDate, endDate);
-    const totalPrice = selectedApartment.pricePerNight * numberOfNights;
-    
-    if (new Date(startDate) >= new Date(endDate)) {
-      document.getElementById("message").innerHTML = `<p class="text-red-600">End date must be after start date.</p>`;
-      return;
+    if (!isAvailable(start, end)) {
+      return (messageBox.innerHTML = `
+        <p class="text-red-600">This apartment is not available for the selected dates.</p>
+        <p class="mt-2">Please choose different dates.</p>
+      `);
     }
-    
-    const loggedUserId = localStorage.getItem("loggedUser");
-    
-    if (!loggedUserId) {
-      document.getElementById("message").innerHTML = `<p class="text-red-600">You need to log in first.</p>`;
-      return;
-    }
-    
-const apartmentId = new URLSearchParams(window.location.search).get("id");
-const response=await getAllApartments()
-const apartment = response.data.find(apt => apt.id === apartmentId);
-document.querySelector(".bookul").innerHTML+=`
-  <li class="flex items-center gap-4 bg-white shadow-md p-4 rounded-lg">
-    <img class="w-14 h-14 rounded-full object-cover border-2 border-blue-500" src="${apartment.coverImage}" alt="Apartment">
-    <p class="text-lg font-semibold text-gray-800">${apartment.location}</p>
-  </li>
-`
+
+    const nights = calculateDays(start, end);
+    const total = selectedApartment.pricePerNight * nights;
+
+    const booking = {
+      userId,
+      apartmentId,
+      startDate: start,
+      endDate: end,
+      status: "pending",
+      totalPrice: total,
+      pricePerNight: selectedApartment.pricePerNight,
+      createdAt: new Date().toISOString()
+    };
 
     try {
-      const bookingData = {
-        userId: JSON.parse(loggedUserId),
-        apartmentId: apartmentId,
-        startDate: startDate,
-        endDate: endDate,
-        status: "pending",
-        totalPrice: totalPrice,
-        createdAt: new Date().toISOString(),
-        pricePerNight: selectedApartment.pricePerNight
-      };
-      
-      const response = await createbook(bookingData);
-      
-      document.getElementById("message").innerHTML = `
+      await createbook(booking);
+      messageBox.innerHTML = `
         <p class="text-green-600">Booking Confirmed!</p>
-        <p class="mt-2">Total: ₼${totalPrice} for ${numberOfNights} nights</p>
+        <p class="mt-2">Total: ₼${total} for ${nights} nights</p>
       `;
-      
-      bookingForm.reset();
-      document.getElementById("totalPriceSection").classList.add("hidden");
-    }
-    
-    
-    
-    catch (error) {
-      document.getElementById("message").innerHTML = `<p class="text-red-600">Error during booking: ${error.message}</p>`;
+      form.reset();
+      totalPriceSection.classList.add("hidden");
+    } catch (err) {
+      messageBox.innerHTML = `<p class="text-red-600">Booking failed: ${err.message}</p>`;
     }
   });
+
+  loadData();
 });

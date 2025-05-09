@@ -108,12 +108,7 @@ function renderApartmentDetail(apartment) {
         <div class="border-t border-gray-200 pt-4 mb-6">
           <h2 class="text-xl font-bold mb-3">Availability</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h3 class="font-bold mb-2">Already Booked Dates:</h3>
-              <div class="space-y-2">
-                ${bookedDatesHtml}
-              </div>
-            </div>
+           
             <div>
               <h3 class="font-bold mb-2">Book this Apartment:</h3>
              
