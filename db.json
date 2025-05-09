@@ -882,6 +882,28 @@
       "status": "pending",
       "createdAt": "2025-05-08T15:39:38.912Z",
       "pricePerNight": 80
+    },
+    {
+      "id": "94a6",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-05-09",
+      "endDate": "2025-05-11",
+      "status": "pending",
+      "totalPrice": 160,
+      "createdAt": "2025-05-08T16:29:09.566Z",
+      "pricePerNight": 80
+    },
+    {
+      "id": "6b6c",
+      "userId": "1",
+      "apartmentId": "3",
+      "startDate": "2025-05-22",
+      "endDate": "2025-05-29",
+      "status": "pending",
+      "totalPrice": 350,
+      "createdAt": "2025-05-08T16:33:26.958Z",
+      "pricePerNight": 50
     }
   ],
   "contacts": [
