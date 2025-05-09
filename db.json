@@ -65,7 +65,7 @@
       "email": "ffff@gmail.com",
       "password": "hhhh",
       "profileImage": "",
-      "balance": 0,
+      "balance": 90,
       "role": "client",
       "bookings": [],
       "isBanned": false,
@@ -747,6 +747,39 @@
       "totalPrice": 500,
       "pricePerNight": 100,
       "createdAt": "2025-05-09T21:34:11.427Z"
+    },
+    {
+      "id": "bc16",
+      "userId": "e3af",
+      "apartmentId": "2",
+      "startDate": "2025-06-06",
+      "endDate": "2025-06-07",
+      "status": "pending",
+      "totalPrice": 80,
+      "pricePerNight": 80,
+      "createdAt": "2025-05-09T22:39:18.047Z"
+    },
+    {
+      "id": "b468",
+      "userId": "e3af",
+      "apartmentId": "9",
+      "startDate": "2025-05-30",
+      "endDate": "2025-05-31",
+      "status": "pending",
+      "totalPrice": 70,
+      "pricePerNight": 70,
+      "createdAt": "2025-05-09T22:40:57.652Z"
+    },
+    {
+      "id": "fa2f",
+      "userId": "e3af",
+      "apartmentId": "4",
+      "startDate": "2025-05-16",
+      "endDate": "2025-05-22",
+      "status": "pending",
+      "totalPrice": 390,
+      "pricePerNight": 65,
+      "createdAt": "2025-05-09T22:44:47.837Z"
     }
   ],
   "contacts": [

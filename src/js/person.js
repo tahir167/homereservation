@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                         
                         <div class="flex justify-between items-center border-b pb-2">
                             <span class="text-gray-600 font-semibold">Password:</span>
-                            <span class="text-gray-800">••••••••</span>
+                            <span class="text-gray-800">${userData.password}</span>
                         </div>
                         
                         <div class="flex justify-between items-center">
