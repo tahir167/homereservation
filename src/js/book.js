@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const apartmentId = new URLSearchParams(window.location.search).get("id");
   let selectedApartment = null;
 
-  // Function to calculate days between two dates
   function calculateDays(startDate, endDate) {
     const start = new Date(startDate);
     const end = new Date(endDate);
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
   }
 
-  // Function to update the total price display
   function updateTotalPrice() {
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
@@ -28,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Fetch apartment details when page loads
   async function fetchApartmentDetails() {
     try {
       const apartmentResponse = await getAllApartments();
@@ -38,14 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("apartmentTitle").textContent = selectedApartment.title;
         document.getElementById("pricePerNight").textContent = `₼${selectedApartment.pricePerNight} per night`;
         
-        // Set up event listeners for date inputs
         const startDateInput = document.getElementById("startDate");
         const endDateInput = document.getElementById("endDate");
         
         startDateInput.addEventListener("change", updateTotalPrice);
         endDateInput.addEventListener("change", updateTotalPrice);
         
-        // Set minimum date to today
         const today = new Date().toISOString().split('T')[0];
         startDateInput.min = today;
         endDateInput.min = today;
@@ -73,13 +68,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const numberOfNights = calculateDays(startDate, endDate);
     const totalPrice = selectedApartment.pricePerNight * numberOfNights;
     
-    // Check if dates are valid
     if (new Date(startDate) >= new Date(endDate)) {
       document.getElementById("message").innerHTML = `<p class="text-red-600">End date must be after start date.</p>`;
       return;
     }
     
-    // Get logged user ID
     const loggedUserId = localStorage.getItem("loggedUser");
     
     if (!loggedUserId) {
@@ -87,6 +80,16 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
     
+const apartmentId = new URLSearchParams(window.location.search).get("id");
+const response=await getAllApartments()
+const apartment = response.data.find(apt => apt.id === apartmentId);
+document.querySelector(".bookul").innerHTML+=`
+  <li class="flex items-center gap-4 bg-white shadow-md p-4 rounded-lg">
+    <img class="w-14 h-14 rounded-full object-cover border-2 border-blue-500" src="${apartment.coverImage}" alt="Apartment">
+    <p class="text-lg font-semibold text-gray-800">${apartment.location}</p>
+  </li>
+`
+
     try {
       const bookingData = {
         userId: JSON.parse(loggedUserId),
@@ -106,10 +109,13 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class="mt-2">Total: ₼${totalPrice} for ${numberOfNights} nights</p>
       `;
       
-      // Reset form
       bookingForm.reset();
       document.getElementById("totalPriceSection").classList.add("hidden");
-    } catch (error) {
+    }
+    
+    
+    
+    catch (error) {
       document.getElementById("message").innerHTML = `<p class="text-red-600">Error during booking: ${error.message}</p>`;
     }
   });

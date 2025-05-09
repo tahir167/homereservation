@@ -904,6 +904,28 @@
       "totalPrice": 350,
       "createdAt": "2025-05-08T16:33:26.958Z",
       "pricePerNight": 50
+    },
+    {
+      "id": "78a3",
+      "userId": "63c6",
+      "apartmentId": "2",
+      "startDate": "2025-05-14",
+      "endDate": "2025-05-15",
+      "status": "pending",
+      "totalPrice": 80,
+      "createdAt": "2025-05-09T10:52:54.960Z",
+      "pricePerNight": 80
+    },
+    {
+      "id": "1c32",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-05-09",
+      "endDate": "2025-05-10",
+      "status": "pending",
+      "totalPrice": 80,
+      "createdAt": "2025-05-09T11:57:40.797Z",
+      "pricePerNight": 80
     }
   ],
   "contacts": [
