@@ -1,18 +1,22 @@
 import { getAllApartments } from "../services/apartments/request.js";
 const loggedUserId = localStorage.getItem("loggedUser");
+import { getAllbook } from "../services/book/request.js";
 
 document.addEventListener("DOMContentLoaded", async function () {
   const urlParams = new URLSearchParams(window.location.search);
   const apartmentId = urlParams.get("id");
-  
+
   if (!apartmentId) {
     window.location.href = "apartments.html";
     return;
   }
-  
+
   try {
-    const response = await getAllApartments();
-    const apartment = response.data.find(apt => apt.id === apartmentId);
+    const bookResponse = await getAllbook();
+    const same = bookResponse.data.find(c => c.apartmentId === apartmentId); // rezervasiya tarixi
+
+    const aptResponse = await getAllApartments();
+    const apartment = aptResponse.data.find(apt => apt.id === apartmentId);
     
     if (!apartment) {
       document.getElementById("apartment-detail").innerHTML = `
@@ -25,8 +29,8 @@ document.addEventListener("DOMContentLoaded", async function () {
       `;
       return;
     }
-    
-    renderApartmentDetail(apartment);
+
+    renderApartmentDetail(apartment, same);
   } catch (error) {
     console.error("Error fetching apartment details:", error);
     document.getElementById("apartment-detail").innerHTML = `
@@ -41,9 +45,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
-function renderApartmentDetail(apartment) {
+async function renderApartmentDetail(apartment, same) {
   const detailContainer = document.getElementById("apartment-detail");
-  
+
   const featuresList = apartment.features.map(feature => 
     `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>${feature}</li>`
   ).join("");
@@ -54,14 +58,10 @@ function renderApartmentDetail(apartment) {
     ).join("")
     : `<li>No specific rules</li>`;
   
-  const bookedDatesHtml = apartment.bookedDates && apartment.bookedDates.length > 0
-    ? apartment.bookedDates.map(date => 
-      `<div class="p-2 bg-red-100 rounded-md text-sm">
-        ${date.startDate} to ${date.endDate}
-      </div>`
-    ).join("")
+  const bookedDatesHtml = same 
+    ? `<div class="p-2 bg-red-100 rounded-md text-sm">${same.startDate} to ${same.endDate}</div>`
     : `<p class="text-green-600">No booked dates</p>`;
-  
+
   detailContainer.innerHTML = `
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
       <div class="relative h-80">
@@ -108,13 +108,17 @@ function renderApartmentDetail(apartment) {
         <div class="border-t border-gray-200 pt-4 mb-6">
           <h2 class="text-xl font-bold mb-3">Availability</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-           
+            <div>
+              <h3 class="font-bold mb-2">Already Booked Dates:</h3>
+              <div class="space-y-2">
+                ${bookedDatesHtml}
+              </div>
+            </div>
             <div>
               <h3 class="font-bold mb-2">Book this Apartment:</h3>
-             
              <button id="bookId" data-id="${apartment.id}" class="bookbtn inline-block px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                 Book
-            </ button>
+            </button>
             </div>
           </div>
         </div>
@@ -128,8 +132,10 @@ function renderApartmentDetail(apartment) {
     </div>
   `;
 
- const bookBtn= document.querySelector(".bookbtn")
- bookBtn.addEventListener("click",async function (params) {
-  window.location.href = `book.html?id=${apartment.id}`;
- })
+  const bookBtn = document.querySelector(".bookbtn");
+  if (bookBtn) {
+    bookBtn.addEventListener("click", function () {
+      window.location.href = `book.html?id=${apartment.id}`;
+    });
+  }
 }
