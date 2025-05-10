@@ -18,9 +18,14 @@ formLogin.addEventListener("submit", async function (e) {
     );
 
     if (foundUser) {
-        localStorage.setItem("loggedUser", JSON.stringify(foundUser.id));
-      window.location.href = "apartments.html";
-
+      localStorage.setItem("loggedUser", JSON.stringify(foundUser.id));
+      
+      // İstifadəçi roluna görə yönləndirmə
+      if (foundUser.role === "admin") {
+        window.location.href = "admin.addaparments.html";
+      } else {
+        window.location.href = "apartments.html";
+      }
     } else {
       alert("Email və ya şifrə səhvdir!");
     }

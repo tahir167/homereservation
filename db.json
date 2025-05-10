@@ -80,7 +80,7 @@
       "password": "7777777",
       "profileImage": "",
       "balance": 0,
-      "role": "client",
+      "role": "admin",
       "bookings": [],
       "isBanned": false,
       "banDate": null,
@@ -780,6 +780,28 @@
       "totalPrice": 390,
       "pricePerNight": 65,
       "createdAt": "2025-05-09T22:44:47.837Z"
+    },
+    {
+      "id": "070a",
+      "userId": "cd9f",
+      "apartmentId": "1",
+      "startDate": "2025-05-15",
+      "endDate": "2025-05-17",
+      "status": "pending",
+      "totalPrice": 160,
+      "pricePerNight": 80,
+      "createdAt": "2025-05-10T12:03:19.851Z"
+    },
+    {
+      "id": "5293",
+      "userId": "1",
+      "apartmentId": "2",
+      "startDate": "2025-07-01",
+      "endDate": "2025-07-03",
+      "status": "pending",
+      "totalPrice": 160,
+      "pricePerNight": 80,
+      "createdAt": "2025-05-10T13:34:07.701Z"
     }
   ],
   "contacts": [

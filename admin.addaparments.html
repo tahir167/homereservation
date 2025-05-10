@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <header class="h-[10vh] shadow ">
+    <nav class="nav flex justify-between w-[80%] mx-auto bg-white h-[100%] items-center">
+      <h1>ApartmentBooking</h1>
+      <ul class="list-none  gap-7 hidden md:flex">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apartments.html">Apartments</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.addaparments.html"></a></li>
+      </ul>
+      <div class=" block md:hidden"><i class="fa-solid fa-bars"></i></div>
+      <div class="navbtn gap-8 hidden md:flex" id="navButtons">
+        <button class="bg-white shadow w-[70px] h-[40px] rounded-md">
+          <a href="login.html">Log in</a>
+        </button>
+        <button class="w-[70px] h-[40px] bg-blue-600 text-white rounded-md">
+          <a href="signup.html">Sign up</a>
+        </button>
+      </div>
+    </nav>
+  </header>
+<div class="bg-gray-100 text-gray-900">
+    <div class="flex h-screen">
+      <aside class="w-64 bg-white shadow-md">
+        <div class="p-6 border-b">
+          <h1 class="text-2xl font-bold">Admin Panel</h1>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-2">
+            <li>
+              <a href="admin.addaparments.html" class="block px-4 py-2 rounded hover:bg-gray-200 transition">Apartments</a>
+            </li>
+            <li>
+              <a href="admin.users.html" class="block px-4 py-2 rounded hover:bg-gray-200 transition">Users</a>
+            </li>
+            <li>
+              <a href="admin.books.html" class="block px-4 py-2 rounded hover:bg-gray-200 transition">Books</a>
+            </li>
+            <li>
+              <a href="admin.statistics.html" class="block px-4 py-2 rounded hover:bg-gray-200 transition">Statistics</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+  
+      <main class="flex-1 p-6">
+        <h2 class="text-xl font-semibold mb-4">Welcome to Admin Panel</h2>
+        <p>Choose a section from the sidebar to manage content.</p>
+        <div id="menuTable"></div>
+      </main>
+    </div>
+  
+</div>
+
+
+<script type="module" src="./src/js/adminapartments.js"></script>
+  <script type="module" src="./src/components/header.js"></script>
+</body>
+
+</html>
