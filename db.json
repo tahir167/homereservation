@@ -129,6 +129,7 @@
       "createdAt": "2025-05-09T14:23:42.181Z",
       "lastLogin": null
     }
+    
   ],
   "apartments": [
     {
@@ -802,6 +803,17 @@
       "totalPrice": 160,
       "pricePerNight": 80,
       "createdAt": "2025-05-10T13:34:07.701Z"
+    },
+    {
+      "id": "577b",
+      "userId": "e0fd",
+      "apartmentId": "2",
+      "startDate": "2025-10-14",
+      "endDate": "2025-10-16",
+      "status": "pending",
+      "totalPrice": 160,
+      "pricePerNight": 80,
+      "createdAt": "2025-05-10T16:56:38.596Z"
     }
   ],
   "contacts": [
