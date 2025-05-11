@@ -1,4 +1,4 @@
-import { Grid } from "gridjs";
+import { Grid, html } from "gridjs";
 import "gridjs/dist/theme/mermaid.css";
 import { getAllApartments } from "../services/apartments/request.js";
 
@@ -13,7 +13,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     pagination: {
       limit: 5
     },
-    columns: ["id", "title", "location", "pricePerNight", "coverImage"],
+    columns: [
+      "id",
+      "title",
+      "location",
+      "pricePerNight",
+      {
+        name: "coverImage",
+        formatter: (cell) =>
+          html(`<img src="${cell}" alt="Apartment" class="w-20 h-20 object-cover rounded" />`)
+      }
+    ],
     data: response.data.map((item) => ({
       id: item.id,
       title: item.title,

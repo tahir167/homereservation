@@ -128,8 +128,21 @@
       "banDate": null,
       "createdAt": "2025-05-09T14:23:42.181Z",
       "lastLogin": null
+    },
+    {
+      "id": "541b",
+      "username": "nicat",
+      "email": "nicat@gmail.com",
+      "password": "nicat123",
+      "profileImage": "",
+      "balance": 0,
+      "role": "client",
+      "bookings": [],
+      "isBanned": false,
+      "banDate": null,
+      "createdAt": "2025-05-10T17:13:22.148Z",
+      "lastLogin": null
     }
-    
   ],
   "apartments": [
     {
@@ -814,6 +827,17 @@
       "totalPrice": 160,
       "pricePerNight": 80,
       "createdAt": "2025-05-10T16:56:38.596Z"
+    },
+    {
+      "id": "0dfb",
+      "userId": "541b",
+      "apartmentId": "9",
+      "startDate": "2025-09-16",
+      "endDate": "2025-09-21",
+      "status": "pending",
+      "totalPrice": 350,
+      "pricePerNight": 70,
+      "createdAt": "2025-05-10T17:15:31.776Z"
     }
   ],
   "contacts": [
