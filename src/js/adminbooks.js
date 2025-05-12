@@ -1,6 +1,6 @@
 import { Grid, html } from "gridjs";
 import "gridjs/dist/theme/mermaid.css";
-import { getAllbook } from "../services/book/request.js";
+import { getAllbook, deletebook } from "../services/book/request.js";
 import moment from "moment";
 
 const reservationTable = document.querySelector("#reservationTable");
@@ -8,7 +8,7 @@ const reservationTable = document.querySelector("#reservationTable");
 document.addEventListener("DOMContentLoaded", async () => {
   const response = await getAllbook();
 
-  const table = new Grid({
+  const grid = new Grid({
     search: true,
     sort: true,
     pagination: {
@@ -45,10 +45,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       {
         name: "Actions",
         formatter: (cell, row) => {
+          const id = row.cells[0].data;
           return html(`
             <button 
-              data-id="${row.cells[0].data}" 
-              class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-700 transition">
+              data-id="${id}" 
+              class="delete-btn bg-red-500 text-white px-2 py-1 rounded hover:bg-red-700 transition">
               Delete
             </button>
           `);
@@ -65,5 +66,24 @@ document.addEventListener("DOMContentLoaded", async () => {
       item.createdAt,
       item.id 
     ]))
-  }).render(reservationTable);
+  });
+
+  grid.render(reservationTable);
+
+  reservationTable.addEventListener("click", async (e) => {
+    if (e.target.classList.contains("delete-btn")) {
+      const id = e.target.getAttribute("data-id");
+      const confirmDelete = confirm("Bu rezervasiyanı silmək istədiyinə əminsən?");
+      if (!confirmDelete) return;
+
+      const result = await deletebook(id);
+      if (result.data) {
+        // 2. Cədvəli yenilə
+        e.target.closest("tr").remove();
+        alert("Rezervasiya uğurla silindi!");
+      } else {
+        alert("Silmək alınmadı. Zəhmət olmasa yenidən yoxla.");
+      }
+    }
+  });
 });

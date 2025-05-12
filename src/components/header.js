@@ -43,3 +43,12 @@ async function renderHeader() {
 }
 
 renderHeader();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburgerMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+});

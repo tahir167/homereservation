@@ -37,10 +37,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                             <span class="text-gray-800">${userData.password}</span>
                         </div>
                         
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600 font-semibold">Balance:</span>
-                            <span class="text-green-600 font-bold">${userData.balance} $</span>
-                        </div>
+ 
 
                         <div class="flex justify-between items-center">
                             <span class="text-gray-600 font-semibold">Role:</span>

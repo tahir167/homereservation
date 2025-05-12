@@ -1,30 +1,44 @@
 <!doctype html>
+
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Admin - Add Apartments | ApartRezervatto</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
   <header class="h-[10vh] shadow ">
     <nav class="nav flex justify-between w-[80%] mx-auto bg-white h-[100%] items-center">
-      <h1>ApartmentBooking</h1>
-      <ul class="list-none  gap-7 hidden md:flex">
+      <div class="flex items-center ">
+        <span class="text-3xl font-semibold text-blue-600">Apart</span>
+        <span class="text-3xl font-semibold text-green-600">Rezervatto</span>
+      </div>
+      <ul class="list-none gap-7 hidden md:flex">
         <li><a href="index.html">Home</a></li>
         <li><a href="apartments.html">Apartments</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="admin.addaparments.html"></a></li>
+
       </ul>
-      <div class=" block md:hidden"><i class="fa-solid fa-bars"></i></div>
+      <div class="block md:hidden">
+        <i class="fa-solid fa-bars text-2xl cursor-pointer" id="hamburgerMenu"></i>
+      </div>
+      
+      <ul id="mobileMenu" class="md:hidden hidden flex-col absolute top-[10vh] left-0 w-full bg-white shadow-lg z-50">
+        <li class="border-b border-gray-200 px-4 py-3"><a href="index.html" class="block text-blue-600">Home</a></li>
+        <li class="border-b border-gray-200 px-4 py-3"><a href="apartments.html" class="block">Apartments</a></li>
+        <li class="border-b border-gray-200 px-4 py-3"><a href="about.html" class="block">About</a></li>
+        <li class="border-b border-gray-200 px-4 py-3"><a href="contact.html" class="block">Contact</a></li>
+        <li class="border-b border-gray-200 px-4 py-3"><a href="signup.html" class="block">About</a></li>
+        <li class="border-b border-gray-200 px-4 py-3"><a href="login.html" class="block">Contact</a></li>
+      </ul>
       <div class="navbtn gap-8 hidden md:flex" id="navButtons">
         <button class="bg-white shadow w-[70px] h-[40px] rounded-md">
           <a href="login.html">Log in</a>
@@ -35,22 +49,23 @@
       </div>
     </nav>
   </header>
-<div class="bg-gray-100 text-gray-900">
-    <div class="flex h-screen">
-      <aside class="w-64 bg-white shadow-md">
+
+  <div class="bg-gray-100 text-gray-900 min-h-screen">
+    <div class="flex">
+      <aside class="w-64 bg-white shadow-md h-[90vh]">
         <div class="p-6 border-b">
           <h1 class="text-2xl font-bold">Admin Panel</h1>
         </div>
         <nav class="p-4">
           <ul class="space-y-2">
             <li>
-              <a href="admin.addaparments.html" class="block px-4 py-2 rounded hover:bg-gray-200 transition">Apartments</a>
+              <a href="admin.addapartments.html" class="block px-4 py-2 rounded bg-blue-100 text-blue-700 font-medium">Apartments</a>
             </li>
             <li>
               <a href="admin.users.html" class="block px-4 py-2 rounded hover:bg-gray-200 transition">Users</a>
             </li>
             <li>
-              <a href="admin.books.html" class="block px-4 py-2 rounded hover:bg-gray-200 transition">Books</a>
+              <a href="admin.books.html" class="block px-4 py-2 rounded hover:bg-gray-200 transition">Bookings</a>
             </li>
             <li>
               <a href="admin.statistics.html" class="block px-4 py-2 rounded hover:bg-gray-200 transition">Statistics</a>
@@ -58,18 +73,15 @@
           </ul>
         </nav>
       </aside>
-  
+
       <main class="flex-1 p-6">
-        <h2 class="text-xl font-semibold mb-4">Welcome to Admin Panel</h2>
-        <p>Choose a section from the sidebar to manage content.</p>
+        <!-- This is where our form and data table will be rendered -->
         <div id="menuTable"></div>
       </main>
     </div>
-  
-</div>
+  </div>
 
-
-<script type="module" src="./src/js/adminapartments.js"></script>
+  <script type="module" src="./src/js/adminapartments.js"></script>
   <script type="module" src="./src/components/header.js"></script>
 </body>
 
