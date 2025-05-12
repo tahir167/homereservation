@@ -10,7 +10,6 @@ const editFormContainer = document.createElement("div");
 editFormContainer.className = "mb-8 hidden";
 editFormContainer.id = "editFormContainer";
 
-// Track current apartment being edited
 let currentEditId = null;
 
 async function handleCreateApartment(event) {
@@ -92,7 +91,6 @@ async function handleEditApartment(event) {
   const rules = rulesInput.split(",").map(rule => rule.trim()).filter(rule => rule);
   
   try {
-    // First get the current apartment to keep properties we don't modify
     const currentResponse = await getApartmentById(currentEditId);
     
     if (!currentResponse.data) {
@@ -102,7 +100,6 @@ async function handleEditApartment(event) {
     
     const currentApartment = currentResponse.data;
     
-    // Update only the fields from the form, preserving other fields
     const updatedApartment = {
       ...currentApartment,
       title,
@@ -268,7 +265,7 @@ async function handleDeleteApartment(apartmentId) {
       
       if (response.data) {
         alert('Apartment deleted successfully!');
-        loadApartmentsTable(); // Refresh the table
+        loadApartmentsTable(); 
       } else {
         alert(`Failed to delete apartment: ${response.message}`);
       }
@@ -281,7 +278,6 @@ async function handleDeleteApartment(apartmentId) {
 
 async function handleEditButtonClick(apartmentId) {
   try {
-    // Get the apartment details
     const response = await getApartmentById(apartmentId);
     
     if (!response.data) {
@@ -292,7 +288,6 @@ async function handleEditButtonClick(apartmentId) {
     const apartment = response.data;
     currentEditId = apartmentId;
     
-    // Populate the edit form with the apartment data
     document.getElementById("edit-title").value = apartment.title;
     document.getElementById("edit-location").value = apartment.location;
     document.getElementById("edit-pricePerNight").value = apartment.pricePerNight;
@@ -301,7 +296,6 @@ async function handleEditButtonClick(apartmentId) {
     document.getElementById("edit-features").value = apartment.features.join(", ");
     document.getElementById("edit-rules").value = apartment.rules.join(", ");
     
-    // Show the edit form and scroll to it
     showEditForm();
     editFormContainer.scrollIntoView({ behavior: 'smooth' });
     
@@ -406,15 +400,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   sectionTitle.textContent = "Manage Apartments";
   mainSection.insertBefore(sectionTitle, menuTable);
   
-  // Setup add form
   addFormContainer.appendChild(createAddApartmentForm());
   mainSection.insertBefore(addFormContainer, menuTable);
   
-  // Setup edit form
   editFormContainer.appendChild(createEditApartmentForm());
   mainSection.insertBefore(editFormContainer, menuTable);
   
-  // Add cancel button functionality
   document.getElementById("cancelEditBtn").addEventListener("click", hideEditForm);
   
   await loadApartmentsTable();
