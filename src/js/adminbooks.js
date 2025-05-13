@@ -2,7 +2,9 @@ import { Grid, html } from "gridjs";
 import "gridjs/dist/theme/mermaid.css";
 import { getAllbook, deletebook } from "../services/book/request.js";
 import moment from "moment";
-
+import { checkadminuser } from "../components/header.js";
+import { getAllUsers } from "../services/users/request.js";
+checkadminuser()
 const reservationTable = document.querySelector("#reservationTable");
 
 document.addEventListener("DOMContentLoaded", async () => {

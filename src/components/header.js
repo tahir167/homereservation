@@ -52,3 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenu.classList.toggle("hidden");
   });
 });
+
+export async function checkadminuser() {
+  
+
+  document.addEventListener("DOMContentLoaded", async  function () {
+    const loggedUserId = JSON.parse(localStorage.getItem("loggedUser"));
+  
+  
+    if (!loggedUserId) {
+        window.location.href = "login.html";
+        return;
+    }})
+  }

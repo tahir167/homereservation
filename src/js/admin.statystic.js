@@ -1,5 +1,7 @@
 import ApexCharts from 'apexcharts';
-
+import { getAllUsers } from "../services/users/request.js";
+import { checkadminuser } from "../components/header.js";
+checkadminuser()
 document.addEventListener('DOMContentLoaded', () => {
   const options = {
     chart: {

@@ -1,6 +1,9 @@
 import { Grid, html } from "gridjs";
 import "gridjs/dist/theme/mermaid.css";
 import { getAllApartments, createApartment, deleteApartment, getApartmentById, updateApartment } from "../services/apartments/request.js";
+import { checkadminuser } from "../components/header.js";
+import { getAllUsers } from "../services/users/request.js";
+checkadminuser()
 
 const menuTable = document.querySelector("#menuTable");
 const addFormContainer = document.createElement("div");
