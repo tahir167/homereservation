@@ -8,6 +8,15 @@ checkadminuser()
 const reservationTable = document.querySelector("#reservationTable");
 
 document.addEventListener("DOMContentLoaded", async () => {
+  
+
+    const userrole = JSON.parse(localStorage.getItem("loggedUserrole"));
+  
+    if (userrole!=="admin"||!userrole) {
+      window.location.href="apartments.html"
+    }
+ 
+  
   const response = await getAllbook();
 
   const grid = new Grid({

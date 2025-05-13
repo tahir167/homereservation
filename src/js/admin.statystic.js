@@ -3,6 +3,14 @@ import { getAllUsers } from "../services/users/request.js";
 import { checkadminuser } from "../components/header.js";
 checkadminuser()
 document.addEventListener('DOMContentLoaded', () => {
+ 
+
+    const userrole = JSON.parse(localStorage.getItem("loggedUserrole"));
+  
+    if (userrole!=="admin"||!userrole) {
+      window.location.href="apartments.html"
+    }
+
   const options = {
     chart: {
       type: 'line',

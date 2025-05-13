@@ -5,6 +5,16 @@ import { checkadminuser } from "../components/header.js";
 import { getAllUsers } from "../services/users/request.js";
 checkadminuser()
 
+
+document.addEventListener("DOMContentLoaded", ()=>{
+
+  const userrole = JSON.parse(localStorage.getItem("loggedUserrole"));
+
+  if (userrole!=="admin"||!userrole) {
+    window.location.href="apartments.html"
+  }
+})
+
 const menuTable = document.querySelector("#menuTable");
 const addFormContainer = document.createElement("div");
 addFormContainer.className = "mb-8";

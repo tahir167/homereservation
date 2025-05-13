@@ -5,6 +5,7 @@ const selectLocation = document.querySelector("#selectlocation");
 const menuList = document.querySelector(".menuList");
 
 document.addEventListener("DOMContentLoaded", async function () {
+  
   const response = await getAllApartments();
   console.log(response);
   renderApartmentsList(response.data);
@@ -84,4 +85,5 @@ document.addEventListener("DOMContentLoaded", async function () {
       });
     });
   }
+ 
 });
