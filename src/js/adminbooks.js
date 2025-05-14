@@ -89,7 +89,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const result = await deletebook(id);
       if (result.data) {
-        // 2. Cədvəli yenilə
         e.target.closest("tr").remove();
         alert("Rezervasiya uğurla silindi!");
       } else {
