@@ -1,7 +1,7 @@
 const images = [
-    './src/media/modern-house-with-beautiful-japanese-garden-featuring-stepping-stones-and-pond-photo.jpg',
-    './src/media/ffffffffffff.jpg',
-    './src/media/modern-house-with-beautiful-garden-featuring-pond-and-wooden-pergola-photo (1).jpg',
+    './src/media/pexels-pixabay-259588.jpg',
+    './src/media/pexels-pixabay-259588.jpg',
+    './src/media/pexels-pixabay-259588.jpg',
     
   ];
   
