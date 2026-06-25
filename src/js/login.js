@@ -1,4 +1,4 @@
-import axios from "/node_modules/.vite/deps/axios.js?v=9acb9bfe";
+import axios from "axios";
 import { API_BASE_URL } from "/src/constants/constants.js";
 import { endpoints } from "/src/constants/constants.js";
 import { getAllUsers } from "/src/services/users/request.js?t=1746530517970";
