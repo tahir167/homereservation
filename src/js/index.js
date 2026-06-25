@@ -1,7 +1,7 @@
 const images = [
-    './src/media/picture3.jpg',
-    './src/media/picture2.webp',
-    './src/media/picture1.avif',
+    '/picture1.avif',
+    '/picture2.webp',
+    '/picture3.jpg',
     
   ];
   
@@ -14,3 +14,4 @@ const images = [
   }
   
   setInterval(autoChangeBackground, 2000);
+  
