@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+      "start": "json-server --host 0.0.0.0 --port 10000 db.json"
   },
   "devDependencies": {
     "vite": "^6.3.5"
@@ -18,6 +19,7 @@
     "apexcharts": "^4.7.0",
     "axios": "^1.9.0",
     "gridjs": "^6.2.0",
+    "json-server": "^1.0.0-beta.15",
     "just-validate": "^4.3.0",
     "moment": "^2.30.1",
     "notyf": "^3.10.0",
