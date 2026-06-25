@@ -1,7 +1,7 @@
 const images = [
-    './src/media/pexels-pixabay-259588.jpg',
-    './src/media/pexels-pixabay-259588.jpg',
-    './src/media/pexels-pixabay-259588.jpg',
+    './src/media/picture3.jpg',
+    './src/media/picture2.webp',
+    './src/media/picture1.avif',
     
   ];
   
